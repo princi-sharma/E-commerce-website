@@ -148,7 +148,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      let result = await fetch('http://localhost:8000/login', {
+      let result = await fetch('https://ecom-vr5z.onrender.com/login', {
         method: 'post',
         body: JSON.stringify(formData),
         headers: {

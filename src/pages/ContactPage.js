@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import { Footer, Navbar } from "../components";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     email: "",
     message: "",
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
-      const response = await fetch("http://localhost:8000/api/contact/submit", {
+      const response = await fetch("https://ecom-vr5z.onrender.com/api/contact/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,6 +25,7 @@ const ContactPage = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data); // Display success message
+        setFormData(initialFormData); // Clear form fields
       } else {
         console.error("Error submitting form:", response.statusText);
       }

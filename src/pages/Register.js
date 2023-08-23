@@ -38,7 +38,7 @@ const Register = () => {
     } else {
       setErrors({});
       try {
-        let result = await fetch('http://localhost:8000/signup', {
+        let result = await fetch('https://ecom-vr5z.onrender.com/signup', {
           method: 'post',
           body: JSON.stringify(formData),
           headers: {
