@@ -1,7 +1,7 @@
 import React from "react";
-import { Footer, Navbar } from "../components";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Footer, Navbar } from "../components";
 const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
 
@@ -77,7 +77,7 @@ const Checkout = () => {
                           type="text"
                           className="form-control"
                           id="firstName"
-                          placeholder=""
+                          placeholder="Enter Your First Name..."
                           value=""
                           required
                         />
@@ -94,7 +94,7 @@ const Checkout = () => {
                           type="text"
                           className="form-control"
                           id="lastName"
-                          placeholder=""
+                          placeholder="Enter Your Last Name..."
                           value=""
                           required
                         />
@@ -157,6 +157,11 @@ const Checkout = () => {
                         <select className="form-select" id="country" required>
                           <option value="">Choose...</option>
                           <option>India</option>
+                          <option>Australia</option>
+                          <option>Japan</option>
+                          <option>South Africa</option>
+                          <option>USA</option>
+                          <option>Canada</option>
                         </select>
                         <div className="invalid-feedback">
                           Please select a valid country.

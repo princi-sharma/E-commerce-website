@@ -1,9 +1,9 @@
 
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import Cookies from 'js-cookie';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const cartItems = useSelector(state => state.handleCart);
@@ -14,13 +14,13 @@ const Navbar = () => {
         Cookies.remove('isLoggedIn');
 
         
-        window.location.href = '/'; 
+        window.location.href = '/';
     };
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
             <div className="container">
-                <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/">Ecommerce</NavLink>
+                <NavLink className="navbar-brand fw-bold fs-4 px-2 text-success" to="/">E Commerce</NavLink>
                 <button className="navbar-toggler mx-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

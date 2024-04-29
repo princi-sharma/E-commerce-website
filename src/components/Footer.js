@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-    return ( 
+    return (
         <>
         
         <footer className = "mb-0 text-center">
@@ -10,16 +10,16 @@ const Footer = () => {
         
         <div className = "col-md-6">
         
-        <p className = "mb-3 mb-md-0" > Made By Nitesh Kaushik
+        <p className = "mb-3 mb-md-0" > Made By Princi Sharma
 
         
         </p>
 
 
         
-        </div> 
-        </div> 
-        </footer> 
+        </div>
+        </div>
+        </footer>
         </>
     );
 };
